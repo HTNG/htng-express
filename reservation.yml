@@ -1,0 +1,225 @@
+openapi: 3.0.3
+
+info:
+  version: 0.0.1
+  title: HTNG Express
+  description: |
+    A tightly-scoped spec that cuts through the process
+    to get you core hospitality data
+
+paths:
+  '/reservations':
+    get:
+      summary: 'Retrieve a single reservation'
+      description: |
+        Retrieve a single `Reservation` object from the PMS.
+      parameters:
+        - name: id
+          in: query
+          description: |
+            PMS Reservation ID
+          schema:
+            type: integer
+          required: true
+        - name: property
+          in: query
+          description: |
+            Optional property specification for implementations
+            that aggregate reservations across PMS instances
+            with non-unique identifiers
+          schema:
+            type: string
+          required: false
+
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/ExpressReservation'
+
+components:
+  schemas:
+    ExpressReservation:
+      title: Express Reservation
+      type: object
+      properties:
+        property:
+          description: The property the reservation belongs to
+          $ref: '#/components/schemas/Property'
+        guest:
+          description: The reservation's primary guest
+          $ref: '#/components/schemas/Guest'
+        reservation:
+          description: Reservation
+          $ref: '#/components/schemas/Reservation'
+        payment:
+          description: Payment
+          $ref: '#/components/schemas/Payment'
+
+
+    Property:
+      title: Property
+      type: object
+      properties:
+        propertyCode:
+          type: string
+        chainCode:
+          type: string
+
+    Reservation:
+      title: Reservation
+      type: object
+      properties:
+        ids:
+          type: array
+          items:
+            $ref: '#/components/schemas/NamedIdentifiers'
+        arrival:
+          type: object
+          $ref: '#/components/schemas/Arrival'
+        departure:
+          type: object
+          $ref: '#/components/schemas/Departure'
+        status:
+          type: string
+        room:
+          $ref: '#/components/schemas/Room'
+        associations:
+          type: object
+          $ref: '#/components/schemas/Associations'
+        preferences:
+          type: array
+          items:
+            $ref: '#/components/schemas/Preference'
+
+    Payment:
+      title: Payment
+      type: object
+      properties:
+        dailyRate:
+          type: array
+          items:
+            $ref: '#/components/schemas/DailyRate'
+        method:
+          type: object
+          $ref: '#/components/schemas/PaymentMethod'
+
+
+
+    Arrival:
+      title: Arrival
+      type: object
+      properties:
+        booked:
+          type: string
+        eta:
+          type: string
+
+    Departure:
+      title: Departure
+      type: object
+      properties:
+        booked:
+          type: string
+        etd:
+          type: string
+
+    Room:
+      title: Room
+      type: object
+      properties:
+        number:
+          type: string
+        type:
+          type: string
+
+
+    Guest:
+      title: Guest
+      properties:
+        firstname:
+          type: string
+        lastname:
+          type: string
+        profileId:
+          type: string
+
+    NamedIdentifiers:
+      title: Named Identifier
+      properties:
+        name:
+          type: string
+        value:
+          type: string
+
+    Associations:
+      title: Associations
+      type: object
+      properties:
+        groupCode:
+          type: string
+        companyName:
+          type: string
+        sharedReservationIds:
+          type: array
+          items:
+            type: integer
+        additionalGuestNames:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdditionalGuestName'
+
+    AdditionalGuestName:
+      title: Additional Guest Name
+      type: object
+      properties:
+        firstname:
+          type: string
+        lastname:
+          type: string
+
+    Preference:
+      title: Preference
+      type: object
+      properties:
+        type:
+          type: string
+        value:
+          type: string
+
+    DailyRate:
+      title: Daily Rate
+      type: object
+      properties:
+        date:
+          type: string
+        numAdults:
+          type: integer
+        numChildren:
+          type: integer
+        rate:
+          type: string
+        amount:
+          type: object
+          $ref: '#/components/schemas/PaymentAmount'
+
+    PaymentAmount:
+      title: Payment Amount
+      type: object
+      properties:
+        currency:
+          type: string
+        value:
+          type: integer
+
+    PaymentMethod:
+      title: Payment Method
+      type: object
+      properties:
+        type:
+          type: string
+        postingAllowed:
+          type: boolean
