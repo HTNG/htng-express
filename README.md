@@ -11,7 +11,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![? License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 
 
@@ -21,13 +21,11 @@
 </p>
 
 
-#HTNG Express
+# HTNG Express
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 For hotels, currently the PMS serves as the primary interface for guests, reservations, folio and room data. Because of this, any system that interacts with any of these entities requires an integration to be effective. However, not all integrations are created equal. Integrations that require only a subset of the functionality of the PMS go through the same process as distribution channels. Early integration standards with HTNG were focused on distributing room inventory, connecting a PMS with OTAs, CRS, GDS, website, CRM, etc.
 
@@ -76,9 +74,6 @@ This is an example of how to list things you need to use the software and how to
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -112,7 +107,7 @@ Distributed under the ? License. See `LICENSE` for more information.
 
 Your Name - [@htng](https://twitter.com/htng) - someone@htng.org
 
-Project Link: [https://github.com/HTNG/htng-express](https://github.com/HTNG/htng-express)
+Project Link: [ExpressPMS-Workgroup](https://www.htng.org/general/custom.asp?page=ExpressPMS-Workgroup)
 
 
 
