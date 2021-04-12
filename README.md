@@ -16,7 +16,11 @@
 
 
 <!-- PROJECT LOGO -->
-[https://www.htng.org/resource/resmgr/images/expresspms_page/ExpressPMS.png]
+<p align="center">
+  <img width="1000" height="280" src="https://www.htng.org/resource/resmgr/images/expresspms_page/ExpressPMS.png">
+</p>
+
+
 #HTNG Express
 
 
