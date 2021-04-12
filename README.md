@@ -1,17 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** HTNG, htng-express, htng, someone@htng.org, HTNG Express, 
--->
-
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -30,56 +16,8 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/HTNG/htng-express">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">HTNG Express</h3>
-
-  <p align="center">
-    
-    <br />
-    <a href="https://github.com/HTNG/htng-express"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/HTNG/htng-express">View Demo</a>
-    ·
-    <a href="https://github.com/HTNG/htng-express/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/HTNG/htng-express/issues">Request Feature</a>
-  </p>
-</p>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
-
+[https://www.htng.org/resource/resmgr/images/expresspms_page/ExpressPMS.png]
+#HTNG Express
 
 
 <!-- ABOUT THE PROJECT -->
