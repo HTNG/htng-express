@@ -6,11 +6,11 @@
 * A Patch release is defined as a bug fix to a Minor release. This may include fixing spelling mistakes, or internal issues. If there is no change to the API or document, there is no need for customer communications other than in the event of notification of resolution if the bug was raised by a customer.
 
 # Version Naming Convention
-Release versions will use the Major.Minor.Patch naming convention.
+Release versions will use the Major-Minor-Patch naming convention.
 
-Documents that are being updated as part of a release will use the Major.Minor.Patch-Build naming convention.
+Documents that are being updated as part of a release will use the Major-Minor-Patch-Build naming convention.
 
-The Major.Minor.Patch part of the document version must be the same as the release version.
+The Major-Minor-Patch part of the document version must be the same as the release version.
 
 The Build part of the document version must be a unique number for each time that the document is built.
 
