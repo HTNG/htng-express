@@ -15,10 +15,10 @@
 
 
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT LOGO 
 <p align="center">
   <img width="1000" height="280" src="https://www.htng.org/resource/resmgr/images/expresspms_page/ExpressPMS.png">
-</p>
+</p> -->
 
 
 # HTNG Express
