@@ -9,7 +9,7 @@
 		<version>2.1.1.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.arvoia.atomic</groupId>
+	<groupId>com.myco</groupId>
 	<artifactId>pmsexpress</artifactId>
 	<version>0.0.3-SNAPSHOT</version>
 	<name>pmsexpress</name>
