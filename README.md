@@ -13,67 +13,97 @@
 [![? License][license-shield]][license-url]
 <!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
 
-
-
-<!-- PROJECT LOGO 
-<p align="center">
-  <img width="1000" height="280" src="https://www.htng.org/resource/resmgr/images/expresspms_page/ExpressPMS.png">
-</p> -->
-
-
 # HTNG Express
 
+HTNG Express PMS Integration Spec. V1.0
+logoThe HTNG Express PMS Integrations Specification is built specifically for integrations with property management systems (PMS) that need a limited set of data enabling an expedited integration experience.
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+This specification reduces resources needed for lighter weight implementations and provides property management systems with a streamlined integration process, allowing the industry to align on a single standardized method. This specification supports integrations requiring Reservation, Guest and Room information.
 
-For hotels, currently the PMS serves as the primary interface for guests, reservations, folio and room data. Because of this, any system that interacts with any of these entities requires an integration to be effective. However, not all integrations are created equal. Integrations that require only a subset of the functionality of the PMS go through the same process as distribution channels. Early integration standards with HTNG were focused on distributing room inventory, connecting a PMS with OTAs, CRS, GDS, website, CRM, etc.
+The specification does not support integrations that require a full data set such as those between a Central Reservation System (CRS) and a PMS. Implementations of that nature should continue to utilize the appropriate HTNG and OpenTravel messages.
 
-The process of systems integrations in hotels is generally lengthy and complex. This is especially true for integrations with the PMS systems, which have the highest demand due to their importance.
+## Document Purpose
+For Hotels, currently the PMS serves as the primary interface for Guest, Reservation, Folio, and Room data. Because of this, any system that interacts with any of these entities requires an integration to be effective.
 
-For the vendor: 1) Projects take longer and are less predictable, resulting in delayed revenue; 2) A lot of rework needs to happen when specifications are wrong; and 3) New integrations take time to write which results in a waste of internal resources.
+Not all integrations are created equal. Integrations that require only a subset of the functionality of the PMS go through the same process as distribution channels. This process is quite intensive in many cases and takes significant resources from both the PMS as well as the vendor. This causes a number of friction points for all stake holders, listed below. Early integration standards with HTNG were focused on distributing room inventory, connecting a PMS with OTAs, CRS, GDS, Website, CRM, etc. This was a very comprehensive spec and focused on deep integrations between a PMS and downstream systems. Most of these complexities were necessary to achieve integrations for systems such as the CRS for a booking use case.
 
-For the hotels: 1) Projects get delayed; 2) PMs and other relationship managers sit in the middle of a PMS/vendor; and 3) Lots of interactions create friction in the hotel-PMS and hotel-vendor relationship.
+The current landscape of technology has moved heavily into post-booking. These systems include technologies from Messaging, Wi-Fi, Guest Services, Housekeeping, and many more. These technologies still require integration with the PMS, but unlike their Booking counterparts, the need for PMS integration is limited in scope. In general, Vendors need to learn basic information about who is in the room, understand the state of the room, and potentially post charges.
 
-For the PMS: 1) The amount of integrations that happen each year are lower, resulting in delayed revenue; and 2) Unnecessary resources are used to manage the bespoke process.
+Although the needs for integration for post-booking operations systems differ, they are currently still following the same path. The result is that timelines are extensive for very basic needs, and innovation is stifled for the industry. Every stakeholder is impacted negatively in the current state:
 
-HTNG's Express PMS Integrations Workgroup is focused on creating standards for integrations with PMS systems that require a limited data set, allowing for a much quicker and less resource intensive integration. There are two tracks running simultaneously, one for the creation of the specifications (APIs) and one for creating a more standardized process for integration with various PMS systems.
+### For the Vendor
 
-The specifications track has defined the data fields for three messages: 1) Reservation, 2) Room and 3) Folio. HTNG's Express PMS Workgroup is currently working on the services for each of these messages to create a common process for requesting integrations with PMS providers. This output will be especially helpful for those integrating with multiple PMS providers.`
+• Projects take longer and are less predictable, delayed revenue
 
+• A lot of rework needs to happen when specs are wrong
 
-### Built With
+• New integrations take time to write, wasted internal resources
 
-* []()
-* []()
-* []()
+### For the Hotels
 
+• Projects get delayed
 
+• PMs and other relationship managers sit in the middle of a PMS/Vendor
+
+• Lots of interactions create friction in the Hotel-PMS and Hotel-Vendor relationship For the PMS
+
+• The number of Integrations that happen per year are lower, delayed revenue
+
+• Unnecessary resources to manage the bespoke process
+
+## Scope
+By adding constraints on what information is accessible and what capabilities are available we simplify the end-to-end integration process for all parties involved, however this specification will not fit all vendor’s needs. This specification will have
+
+• Limited data fields available
+
+• Limited capabilities available
+
+• Clear process/docs to request integrations
+
+## Relationship to Other Standards
+This specification and its supporting schemas leverage the existing OpenTravel Alliance methodology for message construction and draws upon data definitions common to several HTNG specifications as of November 1, 2022 Related specifications:
+
+• Folio Detail
+
+• Single Guest Itinerary
+
+• Guest Room Status Messaging
+
+• Intelligent Guest Room
+
+## Useful Resources
+HTNG Express Sandbox
+
+## Additional Documentation
+
+## Audience
+This document is useful for anyone wanting to implement the HTNG Express PMS APIs including but not limited to project managers, developers, and integrators.
+
+## Overview
+This document contains examples of vendor categories that will likely be able to utilize the APIs either to meet their needs fully or partially. It also contains the specific data fields for each of the entities including the data types, optionality, and occurrences for each field. And among other useful information, included is detailed information about how the data fields are used in various PMS system which provides great insight and visibility into when and what questions need to be asked for specific implementation needs.
+
+## Known Limitations
+This specification is not intended to support full scale PMS integrations. It focuses on post-booking and operational use cases. This allows systems who require a limited set of data, specifically those data fields outlined in this document, to integrate easily. For instance, the check-in process will not be supported by the first version of this spec since it requires a significant portion of the booking functionality to work.
+
+This spec is intended to be iterated on and we plan to expand use cases in the future to include additional data fields and capabilities. If there is a use case that meets our core principles, the work group welcomes a conversation for future inclusion.
+
+The HTNG Express spec was created by an industry work group of vendors that intend to use the spec, and PMS systems that intend to support it. The spec will focus on a subset of post-booking use cases first, in areas where there is highest level of alignment. The spec follows a few principles:
+
+Start with focus, but iterate into broader use cases over time
+Keep the specification as simple as possible, but no simpler
+Provide deep context, so that non-hotel technologists can ramp quickly
+Make adoption by the PMS simple
+Build momentum
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* 
-
-### Installation
-
 1. Clone the repo
    ```sh
    git clone https://github.com/HTNG/htng-express.git
    ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -93,8 +123,6 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
 
@@ -105,19 +133,15 @@ Distributed under the ? License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@htng](https://twitter.com/htng) - someone@htng.org
+Slack - [HTNG Members](https://htngmembers.slack.com) - #expresspms
 
 Project Link: [ExpressPMS-Workgroup](https://www.htng.org/general/custom.asp?page=ExpressPMS-Workgroup)
-
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
-
+Please see https://htng.stoplight.io/docs/htng-express-pms-integrations/4d68437c69796-contributors for a comprehensive list of current contributors
 
 
 

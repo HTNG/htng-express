@@ -1,14 +1,23 @@
 # HTNG ExpressPMS Documentation
 
-This is the HTNG ExpressPMS documentation repository
+This is the HTNG ExpressPMS documentation repository.
+This repository contains the Markdown Source files for the documentation.
+Full user documentation is available on Stoplight at https://htng.stoplight.io/docs/htng-express-pms-integrations/72b66de24898e-htng-express-pms-integration-spec-v1-0
+
 
 ## Usage
 
-Documentation is available at https://pms-express.arvoia.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/ This is updated sporadically, but is maintained
+Documents in this repository are the Markdown source files used to generate and maintain the
+Stoplight documentation site. If you make any additions or changes, please treat them
+as a Pull Request from this repository.
 
-Model examples are available as JSON Schema documents at https://pms-express.arvoia.com/showresmodel
+All documents must be vetted and version controlled. This is extremely important for 
+maintaining the integrity of the documentation effort
 
-Versioning docs for the specification as a whole are available in the versioning.md document
+Anyone who is uncomfortable with maintaining Markdown documents may use the 
+integrated Discussion board to discuss any potential documentation changes or amendments
+
+We are an open community of practice, please do not hesitate to air your views!
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
