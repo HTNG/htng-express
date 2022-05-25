@@ -16,7 +16,8 @@
 # HTNG Express
 
 HTNG Express PMS Integration Spec. V1.0
-logoThe HTNG Express PMS Integrations Specification is built specifically for integrations with property management systems (PMS) that need a limited set of data enabling an expedited integration experience.
+
+The HTNG Express PMS Integrations Specification is built specifically for integrations with property management systems (PMS) that need a limited set of data enabling an expedited integration experience.
 
 This specification reduces resources needed for lighter weight implementations and provides property management systems with a streamlined integration process, allowing the industry to align on a single standardized method. This specification supports integrations requiring Reservation, Guest and Room information.
 

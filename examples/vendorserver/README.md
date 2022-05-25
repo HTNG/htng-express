@@ -1,29 +1,10 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+The vendor server is meant as an example implementation of the specification which can be used to develop your own
+applications from, or to study for implementation details
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Developers interested in implementing the HTNG ExpressPMS specification
+* Version 0.0.1
+* [Documentation](https://htng.stoplight.io/docs/htng-express-pms-integrations/72b66de24898e-htng-express-pms-integration-spec-v1-0)
