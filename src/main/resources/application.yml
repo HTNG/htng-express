@@ -1,0 +1,63 @@
+jwt:
+  secret: arvoia
+  get:
+    token: 
+      uri: /hapilogin
+
+info:
+  app:
+    name: PMSExpress
+    description: A service for receiving PMS messages in real time from a Hospitality PMS system
+    version: '@project.version@'
+    swagger-url: /swagger-ui.html
+    maintained-by: Paul
+
+server:
+  port: 8088
+  
+connection-pool: 300
+
+spring:
+  application.name: pmsexpress
+  data:
+    mongodb:
+      database: pmsexpress
+
+management:
+  endpoint:
+    auditevents:
+      enabled: true
+    metrics:
+      enabled: true
+  metrics:
+    export:
+      influx:
+        uri: http://influxdb:8086
+        db: pmsexpress
+        step: 1m
+        auto-create-db: true
+        enabled: false
+
+---
+
+spring:
+  profiles: local
+  data:
+   mongodb:
+      host: localhost
+      port: 27017
+      username:
+      password:
+      database: pmsexpress
+
+management:
+  endpoint:
+    auditevents:
+      enabled: false
+    metrics:
+      enabled: false
+  metrics:
+    export:
+      influx:
+        enabled: false
+
