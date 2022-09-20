@@ -1,0 +1,37 @@
+jwt:
+  secret: mysecret
+  get:
+    token: 
+      uri: /login
+
+info:
+  app:
+    name: PMSExpress
+    description: A service for receiving PMS messages in real time from a Hospitality PMS system
+    version: '0.0.3-SNAPSHOT'
+    swagger-url: /swagger-ui.html
+    maintained-by: PMS-Express WG
+
+server:
+  port: 8080
+  
+spring:
+  application.name: pmsexpress
+  data:
+    mongodb:
+      database: pmsexpress
+
+management:
+  endpoint:
+    auditevents:
+      enabled: true
+    metrics:
+      enabled: true
+
+---
+
+spring:
+  profiles: local
+  data:
+   mongodb:
+    uri: mongodb://localhost:27017/pmsexpress
